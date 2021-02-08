@@ -13,6 +13,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
+    @IBOutlet weak var createAccountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,5 +24,6 @@ class LoginVC: UIViewController {
         dataContainerView.clipsToBounds = true
         
         loginButton.round()
+        createAccountButton.round()
     }
 }

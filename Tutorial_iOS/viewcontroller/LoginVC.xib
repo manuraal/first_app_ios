@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="Tutorial_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="createAccountButton" destination="ZH1-bp-EMv" id="zNL-Kb-yP2"/>
                 <outlet property="dataContainerView" destination="e02-OH-nn1" id="hWS-ux-t9e"/>
                 <outlet property="emailText" destination="cgn-KD-0Ez" id="fsd-vD-wRU"/>
                 <outlet property="forgotPasswordButton" destination="TKk-dY-xpq" id="sbn-DN-bcn"/>
