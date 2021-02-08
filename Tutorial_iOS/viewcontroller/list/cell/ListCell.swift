@@ -9,9 +9,13 @@ import UIKit
 
 class ListCell: UITableViewCell {
 
+    @IBOutlet weak var coordLabel: UILabel!
+    @IBOutlet weak var titleSite: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        titleSite.text = "Hola buenas noches"
+        coordLabel.text = "123,222,222,333"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
