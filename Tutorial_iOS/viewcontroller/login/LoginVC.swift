@@ -26,4 +26,28 @@ class LoginVC: UIViewController {
         loginButton.round()
         createAccountButton.round()
     }
+    
+    func showAlertDialog (alertTitle: String, message: String, actionTitle: String) -> Void {
+        let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: actionTitle, style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
+    @IBAction func navigateToList(_ sender: Any) {
+        if emailText.text == "Manuel" && passwordText.text == "123" {
+            navigateToListVC(self)
+        }else{
+            showAlertDialog(alertTitle: "Error", message: "Usuario o contraseña inválido", actionTitle: "OK")
+            
+        }
+    }
+    
+    @IBAction func rememberPassword(_ sender: Any) {
+        showAlertDialog(alertTitle: "Aquí tienes tu contraseña", message: "123", actionTitle: "OK")
+    }
+    
+    @IBAction func newAccount(_ sender: Any) {
+        showAlertDialog(alertTitle: "Credenciales de tu cuenta", message: "Usuario: Manuel, contraseña: 123", actionTitle: "OK")
+    }
 }

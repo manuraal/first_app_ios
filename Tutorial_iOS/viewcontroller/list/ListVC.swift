@@ -7,10 +7,21 @@
 
 import UIKit
 
-class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class ListVC: UIViewController, UITableViewDataSource  {
+    @IBOutlet weak var sites: UITableView!
     
-    @IBOutlet weak var sitesList: UITableView!
+    private let sitesCellIdentifier = String(describing: ListCell.self)
+    private let refreshControl = UIRefreshControl()
+    private var sitesList: [Site.instance] = []
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        sites.dataSource = self
+        sites.register(UINib(nibName: sitesCellIdentifier, bundle: nil), forCellReuseIdentifier: sitesCellIdentifier)
+        sites.addSubview(refreshControl)
+        // Do any additional setup after loading the view.
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
@@ -18,11 +29,5 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         <#code#>
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 }

@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-func navigateToLoginVC (_ viewController: UIViewController){
-    let loginVC = LoginVC()
-    loginVC.modalPresentationStyle = .fullScreen
-    viewController.present(loginVC, animated: true, completion: nil)
+func navigateToListVC (_ viewController: UIViewController){
+    let listVC = ListVC()
+    listVC.modalPresentationStyle = .fullScreen
+    viewController.present(listVC, animated: true, completion: nil)
 }
