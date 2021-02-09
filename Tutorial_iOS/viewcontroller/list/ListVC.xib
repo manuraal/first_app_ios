@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListVC" customModule="Tutorial_iOS" customModuleProvider="target">
             <connections>
-                <outlet property="sitesList" destination="P8u-LB-9mv" id="ek1-UR-QaM"/>
+                <outlet property="sites" destination="P8u-LB-9mv" id="8yE-fD-ugz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

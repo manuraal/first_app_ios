@@ -10,24 +10,24 @@ import UIKit
 class ListVC: UIViewController, UITableViewDataSource  {
     @IBOutlet weak var sites: UITableView!
     
-    private let sitesCellIdentifier = String(describing: ListCell.self)
-    private let refreshControl = UIRefreshControl()
-    private var sitesList: [Site.instance] = []
+    let siteList = ["Sagrada familia", "Camp nou", "La playa"]
+    let coordList = ["1,3", "4,2", "5,10"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        let nib = UINib(nibName: "SiteTableViewCell", bundle: nil)
+        sites.register(nib, forCellReuseIdentifier: "Site Cell")
         sites.dataSource = self
-        sites.register(UINib(nibName: sitesCellIdentifier, bundle: nil), forCellReuseIdentifier: sitesCellIdentifier)
-        sites.addSubview(refreshControl)
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        siteList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = sites.dequeueReusableCell(withIdentifier: "Site Cell", for: indexPath) as! SiteTableViewCell
+        cell.titleSite.text = siteList[indexPath.row]
+        cell.coordLabel.text = coordList[indexPath.row]
+            return cell
     }
 }

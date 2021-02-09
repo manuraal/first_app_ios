@@ -18,8 +18,8 @@
 		64D66DD725D2A67900444D47 /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D66DD625D2A67900444D47 /* Site.swift */; };
 		64D7F2FD25D15A81004A27D1 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7F2FB25D15A81004A27D1 /* ListVC.swift */; };
 		64D7F2FE25D15A81004A27D1 /* ListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D7F2FC25D15A81004A27D1 /* ListVC.xib */; };
-		64D7F30425D15AB9004A27D1 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7F30225D15AB9004A27D1 /* ListCell.swift */; };
-		64D7F30525D15AB9004A27D1 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D7F30325D15AB9004A27D1 /* ListCell.xib */; };
+		64D7F30425D15AB9004A27D1 /* SiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7F30225D15AB9004A27D1 /* SiteTableViewCell.swift */; };
+		64D7F30525D15AB9004A27D1 /* SiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D7F30325D15AB9004A27D1 /* SiteTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		64D66DD625D2A67900444D47 /* Site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
 		64D7F2FB25D15A81004A27D1 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		64D7F2FC25D15A81004A27D1 /* ListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListVC.xib; sourceTree = "<group>"; };
-		64D7F30225D15AB9004A27D1 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
-		64D7F30325D15AB9004A27D1 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		64D7F30225D15AB9004A27D1 /* SiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteTableViewCell.swift; sourceTree = "<group>"; };
+		64D7F30325D15AB9004A27D1 /* SiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiteTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,6 @@
 				640A339025CD5E6300CDC698 /* viewcontroller */,
 				640A338425CD528E00CDC698 /* utils */,
 				640A336E25CD46CE00CDC698 /* AppDelegate.swift */,
-				64D66DD625D2A67900444D47 /* Site.swift */,
 				640A337725CD46D200CDC698 /* Assets.xcassets */,
 				640A337925CD46D200CDC698 /* LaunchScreen.storyboard */,
 				640A337C25CD46D200CDC698 /* Info.plist */,
@@ -85,6 +84,7 @@
 		640A338425CD528E00CDC698 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				64D66DD625D2A67900444D47 /* Site.swift */,
 				640A338525CD529B00CDC698 /* Extensions.swift */,
 				640A338825CD52C000CDC698 /* Constants.swift */,
 			);
@@ -130,8 +130,8 @@
 		64D7F30025D15A84004A27D1 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				64D7F30225D15AB9004A27D1 /* ListCell.swift */,
-				64D7F30325D15AB9004A27D1 /* ListCell.xib */,
+				64D7F30225D15AB9004A27D1 /* SiteTableViewCell.swift */,
+				64D7F30325D15AB9004A27D1 /* SiteTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 				6461EC7025D12FFE0090B1DB /* LoginVC.xib in Resources */,
 				640A337B25CD46D200CDC698 /* LaunchScreen.storyboard in Resources */,
 				640A337825CD46D200CDC698 /* Assets.xcassets in Resources */,
-				64D7F30525D15AB9004A27D1 /* ListCell.xib in Resources */,
+				64D7F30525D15AB9004A27D1 /* SiteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +211,7 @@
 				64D7F2FD25D15A81004A27D1 /* ListVC.swift in Sources */,
 				6461EC7C25D133A20090B1DB /* Navigator.swift in Sources */,
 				640A338925CD52C000CDC698 /* Constants.swift in Sources */,
-				64D7F30425D15AB9004A27D1 /* ListCell.swift in Sources */,
+				64D7F30425D15AB9004A27D1 /* SiteTableViewCell.swift in Sources */,
 				6461EC6F25D12FFE0090B1DB /* LoginVC.swift in Sources */,
 				64D66DD725D2A67900444D47 /* Site.swift in Sources */,
 				640A336F25CD46CE00CDC698 /* AppDelegate.swift in Sources */,
