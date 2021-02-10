@@ -47,20 +47,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_detail_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-zm-Btp">
-                                <rect key="frame" x="286" y="16" width="26" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="Ntf-w0-tuT"/>
-                                    <constraint firstAttribute="width" constant="26" id="imm-9H-p4Q"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wKJ-XH-1Bw">
+                                <rect key="frame" x="284" y="15" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="ic_detail_arrow"/>
+                                <connections>
+                                    <action selector="navigateToDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I8e-Qf-LQf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="VEf-zm-Btp" secondAttribute="trailing" constant="8" id="0hD-W2-V1P"/>
                             <constraint firstItem="hK2-Rp-LTy" firstAttribute="top" relation="lessThanOrEqual" secondItem="Qwk-yw-Ja5" secondAttribute="top" constant="8" id="0sF-ys-hkZ"/>
                             <constraint firstItem="OAG-KM-OVT" firstAttribute="leading" secondItem="9tO-Iv-l3H" secondAttribute="trailing" constant="2" id="53A-Gf-BRk"/>
-                            <constraint firstAttribute="bottom" secondItem="VEf-zm-Btp" secondAttribute="bottom" constant="16" id="5iR-de-3op"/>
                             <constraint firstItem="9tO-Iv-l3H" firstAttribute="top" secondItem="hK2-Rp-LTy" secondAttribute="bottom" constant="5" id="AsD-MF-AnI"/>
                             <constraint firstAttribute="bottom" secondItem="OAG-KM-OVT" secondAttribute="bottom" constant="12" id="JjU-fy-Ez1"/>
                             <constraint firstAttribute="width" constant="320" id="T3e-zA-fdC"/>
@@ -69,7 +68,6 @@
                             <constraint firstItem="hK2-Rp-LTy" firstAttribute="leading" secondItem="Qwk-yw-Ja5" secondAttribute="leading" constant="8" id="erC-ei-fxB"/>
                             <constraint firstAttribute="height" constant="58" id="j2Y-s4-wd3"/>
                             <constraint firstAttribute="bottom" secondItem="9tO-Iv-l3H" secondAttribute="bottom" constant="12" id="kpi-Gs-pxu"/>
-                            <constraint firstItem="VEf-zm-Btp" firstAttribute="top" secondItem="Qwk-yw-Ja5" secondAttribute="top" constant="16" id="qER-Sr-eHn"/>
                         </constraints>
                     </view>
                 </subviews>

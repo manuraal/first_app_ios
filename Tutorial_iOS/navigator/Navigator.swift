@@ -13,3 +13,11 @@ func navigateToListVC (_ viewController: UIViewController){
     listVC.modalPresentationStyle = .fullScreen
     viewController.present(listVC, animated: true, completion: nil)
 }
+
+func navigateToSiteDetailVC(_ viewController: UIViewController, title: String, coord: String){
+    let siteDetailVC = SiteDetailVC()
+    siteDetailVC.siteDetailTitle.text = title
+    siteDetailVC.siteDetailCoord.text = coord
+    siteDetailVC.modalPresentationStyle = .fullScreen
+    viewController.present(siteDetailVC, animated: true, completion: nil)
+}
