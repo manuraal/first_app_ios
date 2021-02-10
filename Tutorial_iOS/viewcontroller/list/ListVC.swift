@@ -28,6 +28,13 @@ class ListVC: UIViewController, UITableViewDataSource  {
         let cell = sites.dequeueReusableCell(withIdentifier: "Site Cell", for: indexPath) as! SiteTableViewCell
         cell.titleSite.text = siteList[indexPath.row]
         cell.coordLabel.text = coordList[indexPath.row]
-            return cell
+        cell.delegate = self
+        return cell
+    }
+}
+
+extension ListVC: CellToDetailProtocol {
+    func goToDetail(title: String, coord: String) {
+        navigateToSiteDetailVC(self, title: title, coord: coord)
     }
 }

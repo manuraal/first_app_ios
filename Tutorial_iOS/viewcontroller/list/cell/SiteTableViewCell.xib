@@ -52,7 +52,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="ic_detail_arrow"/>
                                 <connections>
-                                    <action selector="navigateToDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I8e-Qf-LQf"/>
+                                    <action selector="navigateToDetail:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UEe-Rc-enU"/>
                                 </connections>
                             </button>
                         </subviews>

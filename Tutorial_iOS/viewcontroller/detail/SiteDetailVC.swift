@@ -18,21 +18,13 @@ class SiteDetailVC: UIViewController {
     @IBOutlet weak var siteDetailEmail: UILabel!
     @IBOutlet weak var siteDetailPhone: UILabel!
     
+    var siteTitle : String = ""
+    var siteCoord : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        siteDetailTitle.text = siteTitle
+        siteDetailCoord.text = siteCoord
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

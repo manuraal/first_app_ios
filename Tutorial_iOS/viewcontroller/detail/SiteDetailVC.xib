@@ -17,6 +17,7 @@
                 <outlet property="siteDetailPhone" destination="Yz2-Fh-3di" id="11G-U0-hfx"/>
                 <outlet property="siteDetailTitle" destination="HEU-tm-YW4" id="dt5-Qd-mjf"/>
                 <outlet property="siteDetailTransport" destination="4QS-4v-xF3" id="hLP-hL-oAi"/>
+                <outlet property="view" destination="k1a-oG-9qJ" id="ash-vs-Isg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

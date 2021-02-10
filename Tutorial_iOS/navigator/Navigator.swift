@@ -16,8 +16,8 @@ func navigateToListVC (_ viewController: UIViewController){
 
 func navigateToSiteDetailVC(_ viewController: UIViewController, title: String, coord: String){
     let siteDetailVC = SiteDetailVC()
-    siteDetailVC.siteDetailTitle.text = title
-    siteDetailVC.siteDetailCoord.text = coord
+    siteDetailVC.siteTitle = title
+    siteDetailVC.siteCoord = coord
     siteDetailVC.modalPresentationStyle = .fullScreen
     viewController.present(siteDetailVC, animated: true, completion: nil)
 }
