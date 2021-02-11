@@ -18,6 +18,11 @@ class ListVC: UIViewController, UITableViewDataSource  {
         let nib = UINib(nibName: "SiteTableViewCell", bundle: nil)
         sites.register(nib, forCellReuseIdentifier: "Site Cell")
         sites.dataSource = self
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "Atras", style: .plain, target: nil, action: nil)
+        self.navigationItem.setHidesBackButton(false, animated: false)
+        self.navigationItem.setLeftBarButton(nil, animated: false)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

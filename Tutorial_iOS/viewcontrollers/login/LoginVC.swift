@@ -7,13 +7,16 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, LoginViewDelegate {
+    
     @IBOutlet weak var dataContainerView: UIView!
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
+    
+    private lazy var presenter: LoginPresenter = LoginPresenter(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,27 +30,38 @@ class LoginVC: UIViewController {
         createAccountButton.round()
     }
     
-    func showAlertDialog (alertTitle: String, message: String, actionTitle: String) -> Void {
-        let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
+    private func showDialog(alertTitle: String, message: String, actionTitle:String){
+        let alert = UIAlertController(title: alertTitle, message:message, preferredStyle: .alert)
         let action = UIAlertAction(title: actionTitle, style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
     }
     
-    @IBAction func navigateToList(_ sender: Any) {
-        if emailText.text == "Manuel" && passwordText.text == "123" {
-            navigateToListVC(self)
-        }else{
-            showAlertDialog(alertTitle: "Error", message: "Usuario o contraseña inválido", actionTitle: "OK")
-            
-        }
+    func showInvalidCredentialsDialog () {
+        showDialog(alertTitle: "Error", message: "Introduzca las credenciales correctas", actionTitle: "Ok")
+    }
+    
+    @IBAction func onLoginClicked(_ sender: Any) {
+        presenter.onLoginClicked()
     }
     
     @IBAction func rememberPassword(_ sender: Any) {
-        showAlertDialog(alertTitle: "Aquí tienes tu contraseña", message: "123", actionTitle: "OK")
+        showDialog(alertTitle: "Aquí tienes tu contraseña", message: "123", actionTitle: "OK")
     }
     
     @IBAction func newAccount(_ sender: Any) {
-        showAlertDialog(alertTitle: "Credenciales de tu cuenta", message: "Usuario: Manuel, contraseña: 123", actionTitle: "OK")
+        showDialog(alertTitle: "Credenciales de tu cuenta", message: "Usuario: Manuel, contraseña: 123", actionTitle: "OK")
+    }
+    
+    func navigateToList() {
+        navigateToListVC(self)
+    }
+    
+    func getEmail() -> String {
+        return emailText.text ?? ""
+    }
+    
+    func getPassword() -> String {
+        return passwordText.text ?? ""
     }
 }
