@@ -25,6 +25,14 @@ class LoginPresenter {
         self.view = view
     }
     
+    func getRightEmail()->String{
+        return rightEmail
+    }
+    
+    func getRightPassword()->String{
+        return rightPassword
+    }
+    
     func onLoginClicked(){
         if view?.getEmail() == rightEmail && view?.getPassword() == rightPassword {
             view?.navigateToList()

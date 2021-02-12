@@ -46,11 +46,11 @@ class LoginVC: UIViewController, LoginViewDelegate {
     }
     
     @IBAction func rememberPassword(_ sender: Any) {
-        showDialog(alertTitle: "Aquí tienes tu contraseña", message: "123", actionTitle: "OK")
+        showDialog(alertTitle: "Aquí tienes tu contraseña", message: "\(presenter.getRightPassword())", actionTitle: "OK")
     }
     
     @IBAction func newAccount(_ sender: Any) {
-        showDialog(alertTitle: "Credenciales de tu cuenta", message: "Usuario: Manuel, contraseña: 123", actionTitle: "OK")
+        showDialog(alertTitle: "Credenciales de tu cuenta", message: "Usuario: \(presenter.getRightEmail()), contraseña: \(presenter.getRightPassword())", actionTitle: "OK")
     }
     
     func navigateToList() {
