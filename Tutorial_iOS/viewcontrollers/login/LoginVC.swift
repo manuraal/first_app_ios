@@ -30,6 +30,16 @@ class LoginVC: UIViewController, LoginViewDelegate {
         createAccountButton.round()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     private func showDialog(alertTitle: String, message: String, actionTitle:String){
         let alert = UIAlertController(title: alertTitle, message:message, preferredStyle: .alert)
         let action = UIAlertAction(title: actionTitle, style: .cancel)

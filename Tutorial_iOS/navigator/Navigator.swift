@@ -11,7 +11,7 @@ import UIKit
 func navigateToListVC (_ viewController: UIViewController){
     let listVC = ListVC()
     listVC.modalPresentationStyle = .fullScreen
-    viewController.present(listVC, animated: true, completion: nil)
+    viewController.navigationController?.pushViewController(listVC, animated: true)
 }
 
 func navigateToSiteDetailVC(_ viewController: UIViewController, title: String, coord: String){
@@ -19,5 +19,5 @@ func navigateToSiteDetailVC(_ viewController: UIViewController, title: String, c
     siteDetailVC.siteTitle = title
     siteDetailVC.siteCoord = coord
     siteDetailVC.modalPresentationStyle = .fullScreen
-    viewController.present(siteDetailVC, animated: true, completion: nil)
+    viewController.navigationController?.pushViewController(siteDetailVC, animated: true)
 }
