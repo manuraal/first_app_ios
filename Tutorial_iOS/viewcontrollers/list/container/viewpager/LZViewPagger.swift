@@ -108,9 +108,10 @@ public class LZViewPager : UIView {
         return header
     }()
     
+    /*
     func hideHeader() {
         headerView.visibility = .gone
-    }
+    }*/
     
     private lazy var contentView: LZViewPagerContent = {
         let content = LZViewPagerContent()
@@ -165,7 +166,7 @@ public class LZViewPager : UIView {
                 make.top.equalTo(headerView.snp.bottom).offset(top)
                 make.height.equalTo(height)
             }
-            self.sendSubview(toBack: separatorView)
+            self.sendSubviewToBack(separatorView)
         }
         
         contentView.snp.remakeConstraints { (make) in

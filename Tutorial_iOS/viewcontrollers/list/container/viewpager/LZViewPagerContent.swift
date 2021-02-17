@@ -129,15 +129,15 @@ class LZViewPagerContent: UIView, UIPageViewControllerDelegate, UIPageViewContro
         }
         if let pvc = self.pageViewController {
             if let _ = pvc.view.superview {
-                pvc.willMove(toParentViewController: nil)
+                pvc.willMove(toParent: nil)
                 pvc.view.removeFromSuperview()
-                pvc.didMove(toParentViewController: nil)
-                pvc.removeFromParentViewController()
+                pvc.didMove(toParent: nil)
+                pvc.removeFromParent()
             }
-            hostController?.addChildViewController(pvc)
-            pvc.willMove(toParentViewController: hostController)
+            hostController?.addChild(pvc)
+            pvc.willMove(toParent: hostController)
             self.addSubview(pvc.view)
-            pvc.didMove(toParentViewController: hostController)
+            pvc.didMove(toParent: hostController)
             pvc.isScrollEnabled = self.shouldEnableSwipeable
         }
         if let first = self.dataSource?.controller(at: index) {

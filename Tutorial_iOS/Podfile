@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '14.3'
+use_frameworks!
+
+project '../Tutorial_iOS'
+
+target 'Tutorial_iOS' do
+    pod 'SnapKit', '~> 5.0.0'
+end
