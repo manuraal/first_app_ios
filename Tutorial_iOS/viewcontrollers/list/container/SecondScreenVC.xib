@@ -19,14 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDW-KD-mmi" customClass="LZViewPager" customModule="Tutorial_iOS" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDW-KD-mmi" customClass="LZViewPager" customModule="Tutorial_iOS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JDW-KD-mmi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2lX-ip-K5g"/>
+                <constraint firstItem="JDW-KD-mmi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KZ7-RM-Dzi"/>
+                <constraint firstItem="JDW-KD-mmi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="X0T-FG-Xqa"/>
+                <constraint firstItem="JDW-KD-mmi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oYv-O2-vD6"/>
+            </constraints>
             <point key="canvasLocation" x="-146.37681159420291" y="61.607142857142854"/>
         </view>
     </objects>

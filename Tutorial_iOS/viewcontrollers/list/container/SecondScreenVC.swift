@@ -47,6 +47,10 @@ class SecondScreenVC: UIViewController, LZViewPagerDataSource, LZViewPagerDelega
         viewPager.select(index: index)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
+    }
 
     func numberOfItems() -> Int {
         subControllers.count
