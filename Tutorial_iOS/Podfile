@@ -6,4 +6,5 @@ project '../Tutorial_iOS'
 
 target 'Tutorial_iOS' do
     pod 'SnapKit', '~> 5.0.0'
+    pod 'Alamofire', '~> 4.7'
 end
