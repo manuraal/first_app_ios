@@ -4,3 +4,5 @@ Tutorial_iOS.xcodeproj/project.xcworkspace/xcuserdata/manuel.xcuserdatad/UserInt
 Tutorial_iOS.xcodeproj/project.pbxproj
 
 *.xcuserstate
+
+*.xcbkptlist

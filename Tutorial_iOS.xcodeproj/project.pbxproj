@@ -18,7 +18,8 @@
 		6461EC7025D12FFE0090B1DB /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6461EC6E25D12FFE0090B1DB /* LoginVC.xib */; };
 		6461EC7C25D133A20090B1DB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461EC7B25D133A20090B1DB /* Navigator.swift */; };
 		6477BE5425D67D44009B552B /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6477BE5325D67D44009B552B /* ListPresenter.swift */; };
-		649FFEF925DBC0D1002D615D /* SecondScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FFEF825DBC0D1002D615D /* SecondScreenVC.swift */; };
+		64998A9D25DE83B50078B016 /* SecondScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64998A9B25DE83B50078B016 /* SecondScreenVC.swift */; };
+		64998AA925DE893E0078B016 /* SecondScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64998A9C25DE83B50078B016 /* SecondScreenVC.xib */; };
 		649FFF0925DBC4B3002D615D /* LZViewPagerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FFF0625DBC4B3002D615D /* LZViewPagerHeader.swift */; };
 		649FFF0A25DBC4B3002D615D /* LZViewPagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FFF0725DBC4B3002D615D /* LZViewPagger.swift */; };
 		649FFF0B25DBC4B3002D615D /* LZViewPagerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FFF0825DBC4B3002D615D /* LZViewPagerContent.swift */; };
@@ -47,8 +48,8 @@
 		6461EC6E25D12FFE0090B1DB /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		6461EC7B25D133A20090B1DB /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		6477BE5325D67D44009B552B /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
-		649FFEF725DBC0D1002D615D /* SecondScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondScreenVC.xib; sourceTree = "<group>"; };
-		649FFEF825DBC0D1002D615D /* SecondScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenVC.swift; sourceTree = "<group>"; };
+		64998A9B25DE83B50078B016 /* SecondScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenVC.swift; sourceTree = "<group>"; };
+		64998A9C25DE83B50078B016 /* SecondScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondScreenVC.xib; sourceTree = "<group>"; };
 		649FFF0625DBC4B3002D615D /* LZViewPagerHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZViewPagerHeader.swift; sourceTree = "<group>"; };
 		649FFF0725DBC4B3002D615D /* LZViewPagger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZViewPagger.swift; sourceTree = "<group>"; };
 		649FFF0825DBC4B3002D615D /* LZViewPagerContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LZViewPagerContent.swift; sourceTree = "<group>"; };
@@ -140,9 +141,9 @@
 		6477BE5625D683D2009B552B /* container */ = {
 			isa = PBXGroup;
 			children = (
+				64998A9B25DE83B50078B016 /* SecondScreenVC.swift */,
+				64998A9C25DE83B50078B016 /* SecondScreenVC.xib */,
 				649FFF0425DBC49B002D615D /* viewpager */,
-				649FFEF825DBC0D1002D615D /* SecondScreenVC.swift */,
-				649FFEF725DBC0D1002D615D /* SecondScreenVC.xib */,
 			);
 			path = container;
 			sourceTree = "<group>";
@@ -297,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64998AA925DE893E0078B016 /* SecondScreenVC.xib in Resources */,
 				64D7F2FE25D15A81004A27D1 /* ListVC.xib in Resources */,
 				6461EC7025D12FFE0090B1DB /* LoginVC.xib in Resources */,
 				640A337B25CD46D200CDC698 /* LaunchScreen.storyboard in Resources */,
@@ -360,11 +362,11 @@
 				64B72A4925D3EE7B0010D2DA /* SiteDetailVC.swift in Sources */,
 				64D7F2FD25D15A81004A27D1 /* ListVC.swift in Sources */,
 				649FFF0925DBC4B3002D615D /* LZViewPagerHeader.swift in Sources */,
+				64998A9D25DE83B50078B016 /* SecondScreenVC.swift in Sources */,
 				6461EC7C25D133A20090B1DB /* Navigator.swift in Sources */,
 				649FFF0A25DBC4B3002D615D /* LZViewPagger.swift in Sources */,
 				64DED78225D5426F00CE1DF6 /* LoginPresenter.swift in Sources */,
 				640A338925CD52C000CDC698 /* Constants.swift in Sources */,
-				649FFEF925DBC0D1002D615D /* SecondScreenVC.swift in Sources */,
 				64D7F30425D15AB9004A27D1 /* SiteTableViewCell.swift in Sources */,
 				640EE27825DD3DE500DC7E31 /* MapVC.swift in Sources */,
 				649FFF0B25DBC4B3002D615D /* LZViewPagerContent.swift in Sources */,

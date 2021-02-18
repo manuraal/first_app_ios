@@ -64,7 +64,7 @@ class LoginVC: UIViewController, LoginViewDelegate {
     }
     
     func navigateToList() {
-        navigateToListVC(self)
+        navigateToSecondScreenVC(self, tab: SecondScreenVC.SecondScreenPage.LIST)
     }
     
     func getEmail() -> String {

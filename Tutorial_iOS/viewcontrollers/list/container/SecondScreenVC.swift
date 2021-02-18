@@ -2,7 +2,7 @@
 //  SecondScreenVC.swift
 //  Pods
 //
-//  Created by Manuel on 16/02/2021.
+//  Created by Manuel on 18/02/2021.
 //
 
 import UIKit
@@ -16,13 +16,13 @@ class SecondScreenVC: UIViewController, LZViewPagerDataSource, LZViewPagerDelega
 
     @IBOutlet weak var viewPager: LZViewPager!
     
-    private var subControllers:[UIViewController] = [ListVC.init(), MapVC.init()]
+    private var subControllers:[UIViewController] = []
     
     var selectedTab = SecondScreenPage.LIST
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         viewPager.dataSource = self
         viewPager.delegate = self
         viewPager.hostController = self
@@ -65,4 +65,3 @@ class SecondScreenVC: UIViewController, LZViewPagerDataSource, LZViewPagerDelega
     }
 
 }
-

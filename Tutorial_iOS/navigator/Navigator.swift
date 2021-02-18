@@ -8,10 +8,12 @@
 import Foundation
 import UIKit
 
-func navigateToListVC (_ viewController: UIViewController){
-    let listVC = ListVC()
-    listVC.modalPresentationStyle = .fullScreen
-    viewController.navigationController?.pushViewController(listVC, animated: true)
+func navigateToSecondScreenVC (_ viewController: UIViewController, tab: SecondScreenVC.SecondScreenPage){
+    
+    //let secondScreenVC = SecondScreenVC(nibName: String(describing: SecondScreenVC.self), bundle: nil)
+    let secondScreenVC = SecondScreenVC()
+    secondScreenVC.selectedTab = tab
+    viewController.navigationController?.pushViewController(secondScreenVC, animated: true)
 }
 
 func navigateToSiteDetailVC(_ viewController: UIViewController, title: String, coord: String){

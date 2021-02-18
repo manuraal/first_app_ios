@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondScreenVC" customModule="Tutorial_iOS" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewPager" destination="alG-50-omo" id="gnM-lI-v8D"/>
+                <outlet property="viewPager" destination="JDW-KD-mmi" id="t3q-fq-TVI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,20 +19,15 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alG-50-omo" customClass="LZViewPager" customModule="Tutorial_iOS" customModuleProvider="target">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDW-KD-mmi" customClass="LZViewPager" customModule="Tutorial_iOS" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="alG-50-omo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="2VZ-X5-w1S"/>
-                <constraint firstItem="alG-50-omo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CeH-Gh-QzM"/>
-                <constraint firstItem="alG-50-omo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Izr-Va-JwC"/>
-                <constraint firstItem="alG-50-omo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hSA-vt-CRb"/>
-            </constraints>
-            <point key="canvasLocation" x="91" y="82"/>
+            <point key="canvasLocation" x="-146.37681159420291" y="61.607142857142854"/>
         </view>
     </objects>
     <resources>
