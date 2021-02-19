@@ -6,19 +6,20 @@
 //
 
 import UIKit
+import Alamofire
 
 class ListVC: UIViewController, UITableViewDataSource  {
+    
     @IBOutlet weak var sites: UITableView!
     
-    let siteList = ["Sagrada familia", "Camp nou", "La playa"]
-    let coordList = ["1,3", "4,2", "5,10"]
-    
+    var siteList : [Site] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib(nibName: "SiteTableViewCell", bundle: nil)
         sites.register(nib, forCellReuseIdentifier: "Site Cell")
         sites.dataSource = self
+        getSites()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,10 +38,27 @@ class ListVC: UIViewController, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = sites.dequeueReusableCell(withIdentifier: "Site Cell", for: indexPath) as! SiteTableViewCell
-        cell.titleSite.text = siteList[indexPath.row]
-        cell.coordLabel.text = coordList[indexPath.row]
+        cell.titleSite.text = siteList[indexPath.row].title
+        cell.coordLabel.text = siteList[indexPath.row].geocoordinates
         cell.delegate = self
         return cell
+    }
+    
+    func getSites(){
+        Alamofire.request("http://t21services.herokuapp.com/points").responseJSON { response in
+            if let JSON = response.result.value as! [String:Any]? {
+               if let jsonArray = JSON["list"] as? [[String:Any]] {
+                   for json in jsonArray {
+                    let id = json["id"] as! String
+                    let title = json["title"] as! String
+                    let geocoordinates = json["geocoordinates"] as! String
+                    let site = Site.init(id: id, title: title, geocoordinates: geocoordinates)
+                    self.siteList.append(site)
+                   }
+                self.sites.reloadData()
+               }
+            }
+        }
     }
 }
 
