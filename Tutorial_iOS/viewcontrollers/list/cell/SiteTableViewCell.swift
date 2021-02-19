@@ -11,6 +11,7 @@ class SiteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var coordLabel: UILabel!
     @IBOutlet weak var titleSite: UILabel!
+    var id: String!
     
     var delegate: CellToDetailProtocol?
     
@@ -23,10 +24,10 @@ class SiteTableViewCell: UITableViewCell {
     }
     
     @IBAction func navigateToDetail(_ sender: Any) {
-        self.delegate?.goToDetail(title: titleSite.text ?? "", coord: coordLabel.text ?? "")
+        self.delegate?.goToDetail(id: id)
     }
 }
 
 protocol CellToDetailProtocol: AnyObject {
-    func goToDetail(title: String, coord: String)
+    func goToDetail(id: String)
 }

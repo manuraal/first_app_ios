@@ -16,10 +16,9 @@ func navigateToSecondScreenVC (_ viewController: UIViewController, tab: SecondSc
     viewController.navigationController?.pushViewController(secondScreenVC, animated: true)
 }
 
-func navigateToSiteDetailVC(_ viewController: UIViewController, title: String, coord: String){
+func navigateToSiteDetailVC(_ viewController: UIViewController, id: String){
     let siteDetailVC = SiteDetailVC()
-    siteDetailVC.siteTitle = title
-    siteDetailVC.siteCoord = coord
+    siteDetailVC.id = id
     siteDetailVC.modalPresentationStyle = .fullScreen
     viewController.navigationController?.pushViewController(siteDetailVC, animated: true)
 }

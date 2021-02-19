@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SiteDetailVC" customModule="Tutorial_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="siteDetailAddress" destination="Q1L-oX-pbL" id="25r-4d-PDd"/>
                 <outlet property="siteDetailCoord" destination="DbQ-I6-jG1" id="aTs-G7-xvn"/>
                 <outlet property="siteDetailDescription" destination="fR4-E4-WsG" id="TCk-Ko-SzB"/>
                 <outlet property="siteDetailEmail" destination="Gee-s4-V3y" id="RnD-26-kyh"/>

@@ -40,6 +40,7 @@ class ListVC: UIViewController, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = sites.dequeueReusableCell(withIdentifier: "Site Cell", for: indexPath) as! SiteTableViewCell
+        cell.id = siteList[indexPath.row].id
         cell.titleSite.text = siteList[indexPath.row].title
         cell.coordLabel.text = siteList[indexPath.row].geocoordinates
         cell.delegate = self
@@ -65,7 +66,7 @@ class ListVC: UIViewController, UITableViewDataSource  {
 }
 
 extension ListVC: CellToDetailProtocol {
-    func goToDetail(title: String, coord: String) {
-        navigateToSiteDetailVC(self, title: title, coord: coord)
+    func goToDetail(id: String) {
+        navigateToSiteDetailVC(self, id: id)
     }
 }
