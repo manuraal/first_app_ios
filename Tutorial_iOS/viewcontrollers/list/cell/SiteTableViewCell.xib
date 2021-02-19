@@ -21,9 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sagrada Familia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK2-Rp-LTy">
-                                <rect key="frame" x="8" y="4" width="120" height="20"/>
+                                <rect key="frame" x="8" y="4" width="270" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7fd-cY-ls2"/>
+                                    <constraint firstAttribute="width" constant="270" id="ffC-x0-qtk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
