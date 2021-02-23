@@ -46,15 +46,26 @@ class SiteDetailVC: UIViewController {
                 let description = json["description"] as! String
                 let phone = json["phone"] as! String
 
-                self.siteDetailTitle.text = title
-                self.siteDetailAddress.text = address
-                self.siteDetailDescription.text = description
-                self.siteDetailCoord.text = geocoordinates
-                self.siteDetailTransport.text = transport
-                self.siteDetailEmail.text = email
-                self.siteDetailPhone.text = phone
+                self.siteDetailTitle.text = title.changeNullByDash()
+                self.siteDetailAddress.text = address.changeNullByDash()
+                self.siteDetailDescription.text = description.changeNullByDash()
+                self.siteDetailCoord.text = geocoordinates.changeNullByDash()
+                self.siteDetailTransport.text = transport.changeNullByDash()
+                self.siteDetailEmail.text = email.changeNullByDash()
+                self.siteDetailPhone.text = phone.changeNullByDash()
            }
         }
     }
     
+}
+
+extension String {
+    func changeNullByDash()->String {
+        let dash = "-"
+        if (self == "null"){
+            return dash
+        } else{
+            return self
+        }
+    }
 }
