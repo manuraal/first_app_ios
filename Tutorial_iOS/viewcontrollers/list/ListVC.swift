@@ -22,18 +22,6 @@ class ListVC: UIViewController, UITableViewDataSource  {
         getSites()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationItem.hidesBackButton = true
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationItem.hidesBackButton = false
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         siteList.count
     }
