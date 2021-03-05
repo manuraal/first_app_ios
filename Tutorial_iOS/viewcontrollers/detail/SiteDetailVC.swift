@@ -24,13 +24,6 @@ class SiteDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getSiteDetail()
-//        siteDetailTitle.text = siteDetail.title
-//        siteDetailAddress.text = siteDetail.address
-//        siteDetailDescription.text = siteDetail.description
-//        siteDetailCoord.text = siteDetail.geocoordinates
-//        siteDetailTransport.text = siteDetail.transport
-//        siteDetailEmail.text = siteDetail.email
-//        siteDetailPhone.text = siteDetail.phone
     }
     
     func getSiteDetail(){

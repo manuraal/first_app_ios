@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import MapKit
 
 class MapVC: UIViewController {
 
+    @IBOutlet weak var map: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        map.mapType = .standard
+        map.showsUserLocation = true
     }
 
 }
