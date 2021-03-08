@@ -9,8 +9,7 @@ import UIKit
 import MapKit
 
 class MapVC: UIViewController {
-
-    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +18,18 @@ class MapVC: UIViewController {
           center: initialLocation.coordinate,
           latitudinalMeters: 50000,
           longitudinalMeters: 60000)
-        map.setCameraBoundary(
+        mapView.setCameraBoundary(
           MKMapView.CameraBoundary(coordinateRegion: region),
           animated: true)
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 200000)
-        map.setCameraZoomRange(zoomRange, animated: true)
-
+        mapView.setCameraZoomRange(zoomRange, animated: true)
     }
-
+    
+    func showSites (sites: [Site]){
+        for site in sites {
+            let annotation = Annotation(title: site.title, coordinate: CLLocationCoordinate2D(latitude: site.geocoordinates.lat, longitude: site.geocoordinates.lng))
+            mapView.addAnnotation(annotation)
+        }
+    }
+    
 }
