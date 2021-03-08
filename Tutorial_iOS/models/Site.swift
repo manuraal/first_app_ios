@@ -10,9 +10,9 @@ import Foundation
 class Site {
     var id = ""
     var title = ""
-    var geocoordinates = ""
+    var geocoordinates: Location
     
-    init(id: String, title: String, geocoordinates: String) {
+    init(id: String, title: String, geocoordinates: Location) {
         self.id = id
         self.title = title
         self.geocoordinates = geocoordinates

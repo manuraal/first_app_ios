@@ -30,7 +30,8 @@ class ListVC: UIViewController, UITableViewDataSource  {
         let cell = sites.dequeueReusableCell(withIdentifier: "Site Cell", for: indexPath) as! SiteTableViewCell
         cell.id = siteList[indexPath.row].id
         cell.titleSite.text = siteList[indexPath.row].title
-        cell.coordLabel.text = siteList[indexPath.row].geocoordinates
+        let coordText = String(format: "%f", siteList[indexPath.row].geocoordinates.lat) + ", " + String(format: "%f", siteList[indexPath.row].geocoordinates.lng)
+        cell.coordLabel.text = coordText
         cell.delegate = self
         return cell
     }
@@ -43,7 +44,9 @@ class ListVC: UIViewController, UITableViewDataSource  {
                     let id = json["id"] as! String
                     let title = json["title"] as! String
                     let geocoordinates = json["geocoordinates"] as! String
-                    let site = Site.init(id: id, title: title, geocoordinates: geocoordinates)
+                    let coordArray = geocoordinates.split(separator: ",")
+                    let location: Location = Location.init(lat: Double(coordArray[0]) ?? 0, lng: Double(coordArray[1]) ?? 0)
+                    let site = Site.init(id: id, title: title, geocoordinates: location)
                     self.siteList.append(site)
                    }
                 self.sites.reloadData()

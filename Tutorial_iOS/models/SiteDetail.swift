@@ -13,11 +13,11 @@ class SiteDetail {
     var address = ""
     var transport = ""
     var email = ""
-    var geocoordinates = ""
+    var geocoordinates: Location
     var description = ""
     var phone = ""
     
-    init(id: String, title: String, address: String, transport: String, email: String, geocoordinates: String, description: String, phone: String) {
+    init(id: String, title: String, address: String, transport: String, email: String, geocoordinates: Location, description: String, phone: String) {
         self.id = id
         self.title = title
         self.address = address
